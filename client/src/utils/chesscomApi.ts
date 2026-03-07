@@ -1,11 +1,13 @@
 import axios from 'axios';
 import type { ChessComGame } from '../types';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
 /**
  * Fetch recent games for a chess.com user via our backend proxy.
  */
 export async function fetchRecentGames(username: string): Promise<ChessComGame[]> {
-  const response = await axios.get(`/api/player/${encodeURIComponent(username)}/games`);
+  const response = await axios.get(`${API_BASE}/api/player/${encodeURIComponent(username)}/games`);
   return response.data.games;
 }
 
