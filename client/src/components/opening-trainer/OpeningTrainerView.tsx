@@ -1,17 +1,22 @@
+import { useState } from 'react';
 import type { OpeningDefinition } from '../../types/openings';
 import { useOpeningNavigation } from '../../hooks/useOpeningNavigation';
 import { TrainerBoardPanel } from './TrainerBoardPanel';
 import { OpeningExplanationPanel } from './OpeningExplanationPanel';
 import { BranchNavigator } from './BranchNavigator';
 import { OpeningMoveList } from './OpeningMoveList';
+import { MoveTreeView } from './MoveTreeView';
 
 interface OpeningTrainerViewProps {
   opening: OpeningDefinition;
   onBack: () => void;
 }
 
+type MoveViewTab = 'moves' | 'tree';
+
 export function OpeningTrainerView({ opening, onBack }: OpeningTrainerViewProps) {
   const nav = useOpeningNavigation(opening);
+  const [moveViewTab, setMoveViewTab] = useState<MoveViewTab>('moves');
 
   return (
     <div className="flex-1 overflow-y-auto">
@@ -70,16 +75,43 @@ export function OpeningTrainerView({ opening, onBack }: OpeningTrainerViewProps)
 
           {/* Right: Explanation + Move list + Branches */}
           <div className="flex-1 flex flex-col gap-3 min-h-[400px] max-h-[550px]">
-            {/* Move list (compact) */}
-            <div className="bg-[#1e1f2e] rounded-lg border border-gray-700/50 flex flex-col max-h-[120px]">
-              <div className="px-3 py-1.5 border-b border-gray-700/50">
-                <span className="text-xs text-gray-500">Moves</span>
+            {/* Move list / Tree view (tabbed) */}
+            <div className="bg-[#1e1f2e] rounded-lg border border-gray-700/50 flex flex-col"
+              style={{ maxHeight: moveViewTab === 'tree' ? '200px' : '120px' }}
+            >
+              <div className="px-3 py-1.5 border-b border-gray-700/50 flex items-center gap-3">
+                <button
+                  onClick={() => setMoveViewTab('moves')}
+                  className={`text-xs font-medium transition-colors ${
+                    moveViewTab === 'moves' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+                  }`}
+                >
+                  Moves
+                </button>
+                <button
+                  onClick={() => setMoveViewTab('tree')}
+                  className={`text-xs font-medium transition-colors ${
+                    moveViewTab === 'tree' ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+                  }`}
+                >
+                  Tree
+                </button>
               </div>
-              <OpeningMoveList
-                path={nav.path}
-                currentIndex={nav.currentIndex}
-                onMoveClick={nav.goToMove}
-              />
+              {moveViewTab === 'moves' ? (
+                <OpeningMoveList
+                  path={nav.path}
+                  currentIndex={nav.currentIndex}
+                  onMoveClick={nav.goToMove}
+                />
+              ) : (
+                <MoveTreeView
+                  opening={opening}
+                  currentNode={nav.currentNode}
+                  currentPath={nav.path.slice(0, nav.currentIndex + 1)}
+                  exploredBranches={nav.exploredBranches}
+                  onNodeClick={nav.goToNode}
+                />
+              )}
             </div>
 
             {/* Branch navigator (conditional) */}

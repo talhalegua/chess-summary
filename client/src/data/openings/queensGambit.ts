@@ -195,7 +195,264 @@ export const queensGambit: OpeningDefinition = {
                                         { square: 'e3', color: '#96bc4b30' },
                                       ],
                                       isMainLine: true,
-                                      children: [],
+                                      children: [
+                                        {
+                                          id: 'qg-5b-O-O',
+                                          san: 'O-O',
+                                          uci: 'e8g8',
+                                          fen: 'rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1P3/PP3PPP/R2QKBNR w KQ - 1 6',
+                                          moveNumber: 10,
+                                          color: 'b',
+                                          explanation:
+                                            "Black castles kingside, bringing the king to safety and connecting the rooks. This is a natural move in the QGD — Black's position is solid, and castling allows the rook to enter the game along the f-file or potentially support a central break with ...e5.",
+                                          concepts: ['king_safety', 'development'],
+                                          arrows: [],
+                                          highlights: [],
+                                          isMainLine: true,
+                                          children: [
+                                            {
+                                              id: 'qg-6w-Nf3',
+                                              san: 'Nf3',
+                                              uci: 'g1f3',
+                                              fen: 'rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ - 2 6',
+                                              moveNumber: 11,
+                                              color: 'w',
+                                              explanation:
+                                                "White develops the last minor piece on the kingside, preparing to castle. The knight on f3 supports d4 and controls the e5 square, maintaining White's grip on the center. This is the standard developing move in the Orthodox QGD.",
+                                              concepts: ['development', 'center_control'],
+                                              arrows: [
+                                                { from: 'f3', to: 'd4', color: 'rgba(150, 188, 75, 0.5)' },
+                                                { from: 'f3', to: 'e5', color: 'rgba(150, 188, 75, 0.5)' },
+                                              ],
+                                              highlights: [],
+                                              isMainLine: true,
+                                              children: [
+                                                {
+                                                  id: 'qg-6b-Nbd7',
+                                                  san: 'Nbd7',
+                                                  uci: 'b8d7',
+                                                  fen: 'r1bq1rk1/pppnbppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 3 7',
+                                                  moveNumber: 12,
+                                                  color: 'b',
+                                                  explanation:
+                                                    "Black develops the queenside knight to d7 rather than c6, leaving the c-pawn free to advance. The knight on d7 supports the f6 knight and keeps options open for ...c5 or ...c6, two important pawn breaks in the QGD.",
+                                                  strategicIdea:
+                                                    "Placing the knight on d7 is a hallmark of the Orthodox QGD. It avoids blocking the c-pawn, which Black may want to push to c5 or c6 depending on the position.",
+                                                  concepts: ['development', 'pawn_structure'],
+                                                  arrows: [
+                                                    { from: 'd7', to: 'f6', color: 'rgba(150, 188, 75, 0.5)' },
+                                                  ],
+                                                  highlights: [],
+                                                  isMainLine: true,
+                                                  children: [
+                                                    {
+                                                      id: 'qg-7w-Rc1',
+                                                      san: 'Rc1',
+                                                      uci: 'a1c1',
+                                                      fen: 'r1bq1rk1/pppnbppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/2RQKB1R b K - 4 7',
+                                                      moveNumber: 13,
+                                                      color: 'w',
+                                                      explanation:
+                                                        "White places the rook on the semi-open c-file, anticipating that the center will open after a future cxd5 exchange. The rook on c1 will exert pressure along the c-file and support a potential minority attack on the queenside.",
+                                                      strategicIdea:
+                                                        "Placing rooks on open or semi-open files is a fundamental positional concept. The c-file is likely to open, and having the rook there first gives White a lasting advantage.",
+                                                      concepts: ['piece_activity', 'pawn_structure'],
+                                                      arrows: [
+                                                        { from: 'c1', to: 'c7', color: 'rgba(247, 198, 49, 0.5)' },
+                                                      ],
+                                                      highlights: [],
+                                                      isMainLine: true,
+                                                      children: [
+                                                        {
+                                                          id: 'qg-7b-c6',
+                                                          san: 'c6',
+                                                          uci: 'c7c6',
+                                                          fen: 'r1bq1rk1/pp1nbppp/2p1pn2/3p2B1/2PP4/2N1PN2/PP3PPP/2RQKB1R w K - 0 8',
+                                                          moveNumber: 14,
+                                                          color: 'b',
+                                                          explanation:
+                                                            "Black reinforces the d5 pawn with c6, creating a solid pawn chain. This is a key defensive setup in the Orthodox QGD — the c6 pawn shores up the center and prepares potential counterplay with ...dxc4 followed by ...Nd5.",
+                                                          concepts: ['center_control', 'pawn_structure'],
+                                                          arrows: [
+                                                            { from: 'c6', to: 'd5', color: 'rgba(150, 188, 75, 0.5)' },
+                                                          ],
+                                                          highlights: [],
+                                                          isMainLine: true,
+                                                          children: [
+                                                            {
+                                                              id: 'qg-8w-Bd3',
+                                                              san: 'Bd3',
+                                                              uci: 'f1d3',
+                                                              fen: 'r1bq1rk1/pp1nbppp/2p1pn2/3p2B1/2PP4/2NBPN2/PP3PPP/2RQK2R b K - 1 8',
+                                                              moveNumber: 15,
+                                                              color: 'w',
+                                                              explanation:
+                                                                "White develops the bishop to d3, aiming at the kingside and preparing to castle. The bishop on d3 eyes the h7 pawn and supports a potential e4 advance. This completes White's minor piece development.",
+                                                              strategicIdea:
+                                                                "The bishop on d3 is well-placed, pointing at Black's kingside. Combined with the Bg5 pin, White has a harmonious setup ready for the middlegame.",
+                                                              concepts: ['development', 'piece_activity'],
+                                                              arrows: [
+                                                                { from: 'd3', to: 'h7', color: 'rgba(247, 198, 49, 0.5)' },
+                                                              ],
+                                                              highlights: [],
+                                                              isMainLine: true,
+                                                              children: [
+                                                                {
+                                                                  id: 'qg-8b-dxc4',
+                                                                  san: 'dxc4',
+                                                                  uci: 'd5c4',
+                                                                  fen: 'r1bq1rk1/pp1nbppp/2p1pn2/6B1/2pP4/2NBPN2/PP3PPP/2RQK2R w K - 0 9',
+                                                                  moveNumber: 16,
+                                                                  color: 'b',
+                                                                  explanation:
+                                                                    "Black releases the central tension by capturing on c4. This is the key moment in the Orthodox QGD — Black gives up the d5 strongpoint but gains the c4 pawn and opens the position for piece play. The idea is to follow up with ...Nd5, trading pieces to ease the defense.",
+                                                                  watchOutFor:
+                                                                    "After dxc4, White recaptures with the bishop, and Black typically plays ...Nd5 to exchange the Bg5, reducing White's attacking potential.",
+                                                                  concepts: ['center_control', 'pawn_structure'],
+                                                                  arrows: [],
+                                                                  highlights: [],
+                                                                  isMainLine: true,
+                                                                  children: [
+                                                                    {
+                                                                      id: 'qg-9w-Bxc4',
+                                                                      san: 'Bxc4',
+                                                                      uci: 'd3c4',
+                                                                      fen: 'r1bq1rk1/pp1nbppp/2p1pn2/6B1/2BP4/2N1PN2/PP3PPP/2RQK2R b K - 0 9',
+                                                                      moveNumber: 17,
+                                                                      color: 'w',
+                                                                      explanation:
+                                                                        "White recaptures with the bishop, which now sits on a strong diagonal aimed at f7. White has a clear central advantage with the d4 pawn and active pieces. The position is a classic QGD middlegame.",
+                                                                      concepts: ['piece_activity', 'center_control'],
+                                                                      arrows: [
+                                                                        { from: 'c4', to: 'f7', color: 'rgba(247, 198, 49, 0.5)' },
+                                                                      ],
+                                                                      highlights: [
+                                                                        { square: 'd4', color: '#96bc4b40' },
+                                                                      ],
+                                                                      isMainLine: true,
+                                                                      children: [
+                                                                        {
+                                                                          id: 'qg-9b-Nd5',
+                                                                          san: 'Nd5',
+                                                                          uci: 'f6d5',
+                                                                          fen: 'r1bq1rk1/pp1nbppp/2p1p3/3n2B1/2BP4/2N1PN2/PP3PPP/2RQK2R w K - 1 10',
+                                                                          moveNumber: 18,
+                                                                          color: 'b',
+                                                                          explanation:
+                                                                            "Black plays the thematic knight jump to d5, attacking the bishop on g5 and offering to trade pieces. By exchanging minor pieces, Black aims to relieve the cramped position and neutralize White's attacking chances on the kingside.",
+                                                                          strategicIdea:
+                                                                            "The ...Nd5 maneuver is the key freeing idea in the Orthodox QGD. Trading the dark-squared bishops removes White's most active minor piece and eases Black's defensive burden.",
+                                                                          concepts: ['piece_activity', 'tactical_threat'],
+                                                                          arrows: [
+                                                                            { from: 'd5', to: 'g5', color: 'rgba(202, 52, 49, 0.5)' },
+                                                                          ],
+                                                                          highlights: [],
+                                                                          isMainLine: true,
+                                                                          children: [
+                                                                            {
+                                                                              id: 'qg-10w-Bxe7',
+                                                                              san: 'Bxe7',
+                                                                              uci: 'g5e7',
+                                                                              fen: 'r1bq1rk1/pp1nBppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQK2R b K - 0 10',
+                                                                              moveNumber: 19,
+                                                                              color: 'w',
+                                                                              explanation:
+                                                                                "White captures the bishop on e7 rather than retreating. This exchange is practically forced — the bishop on g5 has no good retreat squares, and taking on e7 keeps White's initiative. The game now enters a well-known endgame structure.",
+                                                                              concepts: ['piece_activity'],
+                                                                              arrows: [],
+                                                                              highlights: [],
+                                                                              isMainLine: true,
+                                                                              children: [
+                                                                                {
+                                                                                  id: 'qg-10b-Qxe7',
+                                                                                  san: 'Qxe7',
+                                                                                  uci: 'd8e7',
+                                                                                  fen: 'r1b2rk1/pp1nqppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQK2R w K - 0 11',
+                                                                                  moveNumber: 20,
+                                                                                  color: 'b',
+                                                                                  explanation:
+                                                                                    "Black recaptures with the queen, which now sits actively on e7. The dark-squared bishops have been traded, and the position is heading toward a strategic middlegame. Black's position is solid but slightly passive.",
+                                                                                  concepts: ['piece_activity'],
+                                                                                  arrows: [],
+                                                                                  highlights: [],
+                                                                                  isMainLine: true,
+                                                                                  children: [
+                                                                                    {
+                                                                                      id: 'qg-11w-O-O',
+                                                                                      san: 'O-O',
+                                                                                      uci: 'e1g1',
+                                                                                      fen: 'r1b2rk1/pp1nqppp/2p1p3/3n4/2BP4/2N1PN2/PP3PPP/2RQ1RK1 b - - 1 11',
+                                                                                      moveNumber: 21,
+                                                                                      color: 'w',
+                                                                                      explanation:
+                                                                                        "White castles, completing development and connecting the rooks. The king is safe, and White is ready to begin the middlegame plan — typically the minority attack on the queenside with a4-a5 and b4-b5 to create weaknesses in Black's pawn structure.",
+                                                                                      strategicIdea:
+                                                                                        "The minority attack is White's signature plan in the QGD: advance the a- and b-pawns against Black's queenside majority to create isolated or backward pawns that can be targeted.",
+                                                                                      concepts: ['king_safety', 'development'],
+                                                                                      arrows: [],
+                                                                                      highlights: [],
+                                                                                      isMainLine: true,
+                                                                                      children: [
+                                                                                        {
+                                                                                          id: 'qg-11b-Nxc3',
+                                                                                          san: 'Nxc3',
+                                                                                          uci: 'd5c3',
+                                                                                          fen: 'r1b2rk1/pp1nqppp/2p1p3/8/2BP4/2n1PN2/PP3PPP/2RQ1RK1 w - - 0 12',
+                                                                                          moveNumber: 22,
+                                                                                          color: 'b',
+                                                                                          explanation:
+                                                                                            "Black captures the knight on c3, trading off a pair of minor pieces to simplify the position. This is a standard idea — reducing material helps the defender, and Black aims for a solid, equal endgame.",
+                                                                                          concepts: ['piece_activity'],
+                                                                                          arrows: [],
+                                                                                          highlights: [],
+                                                                                          isMainLine: true,
+                                                                                          children: [
+                                                                                            {
+                                                                                              id: 'qg-12w-Rxc3',
+                                                                                              san: 'Rxc3',
+                                                                                              uci: 'c1c3',
+                                                                                              fen: 'r1b2rk1/pp1nqppp/2p1p3/8/2BP4/2R1PN2/PP3PPP/3Q1RK1 b - - 0 12',
+                                                                                              moveNumber: 23,
+                                                                                              color: 'w',
+                                                                                              explanation:
+                                                                                                "White recaptures with the rook, keeping it active on the c-file. The rook on c3 can swing to the kingside via c3-a3 or remain on the c-file to pressure c6. This is a classic tabiya of the Orthodox QGD, where both sides have clear plans and the battle is deeply strategic.",
+                                                                                              strategicIdea:
+                                                                                                "From this position, White will pursue the minority attack with b4-b5 while using the active rook on c3. Black will aim to activate the light-squared bishop and create counterplay in the center or on the kingside.",
+                                                                                              concepts: ['piece_activity', 'pawn_structure'],
+                                                                                              arrows: [
+                                                                                                { from: 'c3', to: 'c6', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                              ],
+                                                                                              highlights: [],
+                                                                                              isMainLine: true,
+                                                                                              children: [],
+                                                                                            },
+                                                                                          ],
+                                                                                        },
+                                                                                      ],
+                                                                                    },
+                                                                                  ],
+                                                                                },
+                                                                              ],
+                                                                            },
+                                                                          ],
+                                                                        },
+                                                                      ],
+                                                                    },
+                                                                  ],
+                                                                },
+                                                              ],
+                                                            },
+                                                          ],
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
                                     },
                                   ],
                                 },

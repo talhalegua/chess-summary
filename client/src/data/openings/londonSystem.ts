@@ -186,7 +186,195 @@ export const londonSystem: OpeningDefinition = {
                                       ],
                                       highlights: [],
                                       isMainLine: true,
-                                      children: [],
+                                      children: [
+                                        {
+                                          id: 'london-5b-Bxg3',
+                                          san: 'Bxg3',
+                                          uci: 'd6g3',
+                                          fen: 'rnbqk2r/ppp2ppp/4pn2/3p4/3P4/4PNb1/PPP2PPP/RN1QKB1R w KQkq - 0 6',
+                                          moveNumber: 10,
+                                          color: 'b',
+                                          explanation:
+                                            'Black trades the dark-squared bishops. This is the most common continuation — Black eliminates the London bishop rather than allowing White to maintain the tension. The trade has important structural consequences for both sides.',
+                                          concepts: ['piece_activity', 'pawn_structure'],
+                                          arrows: [],
+                                          highlights: [],
+                                          isMainLine: true,
+                                          children: [
+                                            {
+                                              id: 'london-6w-hxg3',
+                                              san: 'hxg3',
+                                              uci: 'h2g3',
+                                              fen: 'rnbqk2r/ppp2ppp/4pn2/3p4/3P4/4PNP1/PPP2PP1/RN1QKB1R b KQkq - 0 6',
+                                              moveNumber: 11,
+                                              color: 'w',
+                                              explanation:
+                                                'White recaptures with the h-pawn, opening the h-file! This is the key benefit of retreating to g3 instead of trading immediately — the open h-file gives White\'s rook a direct highway toward the Black king. The doubled g-pawns also control the f4 square.',
+                                              strategicIdea:
+                                                'The open h-file is a powerful asset in the London System. After castling kingside and placing a rook on h1 (it\'s already there!), White has natural attacking chances against the Black king.',
+                                              concepts: ['king_safety', 'piece_activity'],
+                                              arrows: [
+                                                { from: 'h1', to: 'h8', color: 'rgba(247, 198, 49, 0.4)' },
+                                              ],
+                                              highlights: [
+                                                { square: 'g3', color: '#96bc4b30' },
+                                              ],
+                                              isMainLine: true,
+                                              children: [
+                                                {
+                                                  id: 'london-6b-OO',
+                                                  san: 'O-O',
+                                                  uci: 'e8g8',
+                                                  fen: 'rnbq1rk1/ppp2ppp/4pn2/3p4/3P4/4PNP1/PPP2PP1/RN1QKB1R w KQ - 1 7',
+                                                  moveNumber: 12,
+                                                  color: 'b',
+                                                  explanation:
+                                                    'Black castles kingside, getting the king to safety. Even though the h-file is open, Black\'s kingside is still solid with the knight on f6 and pawns on f7/g7.',
+                                                  concepts: ['king_safety'],
+                                                  arrows: [],
+                                                  highlights: [],
+                                                  isMainLine: true,
+                                                  children: [
+                                                    {
+                                                      id: 'london-7w-Bd3',
+                                                      san: 'Bd3',
+                                                      uci: 'f1d3',
+                                                      fen: 'rnbq1rk1/ppp2ppp/4pn2/3p4/3P4/3BPNP1/PPP2PP1/RN1QK2R b KQ - 2 7',
+                                                      moveNumber: 13,
+                                                      color: 'w',
+                                                      explanation:
+                                                        'White develops the light-squared bishop to its ideal square d3, eyeing the kingside (particularly h7). This bishop combines with the open h-file to create potential attacking chances. The London development scheme is nearly complete.',
+                                                      strategicIdea:
+                                                        'The Bd3 + open h-file combination is White\'s main attacking idea in this London line. The bishop targets h7 and can support a future e4 pawn break.',
+                                                      concepts: ['development', 'piece_activity'],
+                                                      arrows: [
+                                                        { from: 'd3', to: 'h7', color: 'rgba(247, 198, 49, 0.4)' },
+                                                      ],
+                                                      highlights: [],
+                                                      isMainLine: true,
+                                                      children: [
+                                                        {
+                                                          id: 'london-7b-c5',
+                                                          san: 'c5',
+                                                          uci: 'c7c5',
+                                                          fen: 'rnbq1rk1/pp3ppp/4pn2/2pp4/3P4/3BPNP1/PPP2PP1/RN1QK2R w KQ - 0 8',
+                                                          moveNumber: 14,
+                                                          color: 'b',
+                                                          explanation:
+                                                            'Black counter-attacks the d4 pawn, the standard plan against any d4 setup. This creates tension in the center that White must address.',
+                                                          concepts: ['center_control', 'pawn_structure'],
+                                                          arrows: [
+                                                            { from: 'c5', to: 'd4', color: 'rgba(202, 52, 49, 0.5)' },
+                                                          ],
+                                                          highlights: [],
+                                                          isMainLine: true,
+                                                          children: [
+                                                            {
+                                                              id: 'london-8w-c3',
+                                                              san: 'c3',
+                                                              uci: 'c2c3',
+                                                              fen: 'rnbq1rk1/pp3ppp/4pn2/2pp4/3P4/2PBPNP1/PP3PP1/RN1QK2R b KQ - 0 8',
+                                                              moveNumber: 15,
+                                                              color: 'w',
+                                                              explanation:
+                                                                'White reinforces d4 with c3, completing the London pyramid. The structure c3-d4-e3 is rock solid. White is now ready for Nbd2, O-O (or keep the rook on h1 for attack), and eventually aim for the e4 break.',
+                                                              strategicIdea:
+                                                                'The completed London pyramid (c3, d4, e3) with Bd3, Nf3, and the open h-file gives White a very comfortable middlegame. The plan is Nbd2, Qe2, and then play for e4.',
+                                                              concepts: ['center_control', 'pawn_structure'],
+                                                              arrows: [],
+                                                              highlights: [
+                                                                { square: 'c3', color: '#96bc4b30' },
+                                                                { square: 'd4', color: '#96bc4b30' },
+                                                                { square: 'e3', color: '#96bc4b30' },
+                                                              ],
+                                                              isMainLine: true,
+                                                              children: [
+                                                                {
+                                                                  id: 'london-8b-Nc6',
+                                                                  san: 'Nc6',
+                                                                  uci: 'b8c6',
+                                                                  fen: 'r1bq1rk1/pp3ppp/2n1pn2/2pp4/3P4/2PBPNP1/PP3PP1/RN1QK2R w KQ - 1 9',
+                                                                  moveNumber: 16,
+                                                                  color: 'b',
+                                                                  explanation:
+                                                                    'Black develops the knight to c6, adding pressure to d4 and preparing to bring more pieces into the game. Both sides now have a clear plan: White aims for e4, Black targets d4.',
+                                                                  concepts: ['development', 'center_control'],
+                                                                  arrows: [
+                                                                    { from: 'c6', to: 'd4', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                  ],
+                                                                  highlights: [],
+                                                                  isMainLine: true,
+                                                                  children: [
+                                                                    {
+                                                                      id: 'london-9w-Nbd2',
+                                                                      san: 'Nbd2',
+                                                                      uci: 'b1d2',
+                                                                      fen: 'r1bq1rk1/pp3ppp/2n1pn2/2pp4/3P4/2PBPNP1/PP1N1PP1/R2QK2R b KQ - 2 9',
+                                                                      moveNumber: 17,
+                                                                      color: 'w',
+                                                                      explanation:
+                                                                        'White develops the last minor piece. The knight goes to d2 rather than c3 because c3 is occupied by a pawn. From d2, the knight supports the e4 push — White\'s main strategic break in the London System.',
+                                                                      strategicIdea:
+                                                                        'With all pieces developed, White\'s next goal is the e4 pawn break. After Qe2 and O-O (or keeping the rook on h1), playing e4 would open the center favorably for White.',
+                                                                      concepts: ['development', 'center_control'],
+                                                                      arrows: [
+                                                                        { from: 'd2', to: 'e4', color: 'rgba(247, 198, 49, 0.4)' },
+                                                                      ],
+                                                                      highlights: [],
+                                                                      isMainLine: true,
+                                                                      children: [
+                                                                        {
+                                                                          id: 'london-9b-Qe7',
+                                                                          san: 'Qe7',
+                                                                          uci: 'd8e7',
+                                                                          fen: 'r1b2rk1/pp2qppp/2n1pn2/2pp4/3P4/2PBPNP1/PP1N1PP1/R2QK2R w KQ - 3 10',
+                                                                          moveNumber: 18,
+                                                                          color: 'b',
+                                                                          explanation:
+                                                                            'Black places the queen on e7, connecting the rooks and preparing to place the bishop on d7 or b7. This is a flexible position where both sides have clear plans.',
+                                                                          concepts: ['development'],
+                                                                          arrows: [],
+                                                                          highlights: [],
+                                                                          isMainLine: true,
+                                                                          children: [
+                                                                            {
+                                                                              id: 'london-10w-Qe2',
+                                                                              san: 'Qe2',
+                                                                              uci: 'd1e2',
+                                                                              fen: 'r1b2rk1/pp2qppp/2n1pn2/2pp4/3P4/2PBPNP1/PP1NQPP1/R3K2R b KQ - 4 10',
+                                                                              moveNumber: 19,
+                                                                              color: 'w',
+                                                                              explanation:
+                                                                                'White places the queen on e2, supporting the planned e4 break and keeping the option of castling either side. The position is ready for action — White can castle queenside for an attacking setup or castle kingside for a safer approach.',
+                                                                              strategicIdea:
+                                                                                'The London System has reached its ideal setup. All pieces are developed, the center is solid, and White has a clear plan: play e4 to open lines and activate the pieces. This is a textbook London middlegame.',
+                                                                              concepts: ['development', 'center_control'],
+                                                                              arrows: [
+                                                                                { from: 'e3', to: 'e4', color: 'rgba(247, 198, 49, 0.4)' },
+                                                                              ],
+                                                                              highlights: [],
+                                                                              isMainLine: true,
+                                                                              children: [],
+                                                                            },
+                                                                          ],
+                                                                        },
+                                                                      ],
+                                                                    },
+                                                                  ],
+                                                                },
+                                                              ],
+                                                            },
+                                                          ],
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
                                     },
                                   ],
                                 },
@@ -228,7 +416,113 @@ export const londonSystem: OpeningDefinition = {
                                         { square: 'e3', color: '#96bc4b30' },
                                       ],
                                       isMainLine: true,
-                                      children: [],
+                                      children: [
+                                        {
+                                          id: 'london-cs-5b-Nc6',
+                                          san: 'Nc6',
+                                          uci: 'b8c6',
+                                          fen: 'r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R w KQkq - 1 6',
+                                          moveNumber: 10,
+                                          color: 'b',
+                                          explanation:
+                                            'Black develops the knight, adding pressure to d4. This is the natural follow-up after ...c5 — Black builds up forces against the center.',
+                                          concepts: ['development', 'center_control'],
+                                          arrows: [
+                                            { from: 'c6', to: 'd4', color: 'rgba(202, 52, 49, 0.4)' },
+                                          ],
+                                          highlights: [],
+                                          isMainLine: true,
+                                          children: [
+                                            {
+                                              id: 'london-cs-6w-Nbd2',
+                                              san: 'Nbd2',
+                                              uci: 'b1d2',
+                                              fen: 'r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 2 6',
+                                              moveNumber: 11,
+                                              color: 'w',
+                                              explanation:
+                                                'White develops the knight to d2, continuing the standard London setup. From d2, the knight supports e4 and keeps the position flexible.',
+                                              concepts: ['development'],
+                                              arrows: [
+                                                { from: 'd2', to: 'e4', color: 'rgba(247, 198, 49, 0.4)' },
+                                              ],
+                                              highlights: [],
+                                              isMainLine: true,
+                                              children: [
+                                                {
+                                                  id: 'london-cs-6b-Bd6',
+                                                  san: 'Bd6',
+                                                  uci: 'f8d6',
+                                                  fen: 'r1bqk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R w KQkq - 3 7',
+                                                  moveNumber: 12,
+                                                  color: 'b',
+                                                  explanation:
+                                                    'Black develops the bishop to d6, challenging the London bishop. This forces the familiar decision — retreat to g3 or trade.',
+                                                  concepts: ['development', 'piece_activity'],
+                                                  arrows: [
+                                                    { from: 'd6', to: 'f4', color: 'rgba(202, 52, 49, 0.5)' },
+                                                  ],
+                                                  highlights: [],
+                                                  isMainLine: true,
+                                                  children: [
+                                                    {
+                                                      id: 'london-cs-7w-Bg3',
+                                                      san: 'Bg3',
+                                                      uci: 'f4g3',
+                                                      fen: 'r1bqk2r/pp3ppp/2nbpn2/2pp4/3P4/2P1PNB1/PP1N1PPP/R2QKB1R b KQkq - 4 7',
+                                                      moveNumber: 13,
+                                                      color: 'w',
+                                                      explanation:
+                                                        'White retreats to g3, maintaining the bishop pair as in the main line. The position will often transpose to similar structures after Black castles.',
+                                                      concepts: ['piece_activity'],
+                                                      arrows: [],
+                                                      highlights: [],
+                                                      isMainLine: true,
+                                                      children: [
+                                                        {
+                                                          id: 'london-cs-7b-OO',
+                                                          san: 'O-O',
+                                                          uci: 'e8g8',
+                                                          fen: 'r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2P1PNB1/PP1N1PPP/R2QKB1R w KQ - 5 8',
+                                                          moveNumber: 14,
+                                                          color: 'b',
+                                                          explanation:
+                                                            'Black castles, reaching a rich middlegame position. Both sides have clear plans: White aims for Bd3, Qe2, e4; Black will continue to pressure d4 and develop the remaining pieces.',
+                                                          concepts: ['king_safety', 'development'],
+                                                          arrows: [],
+                                                          highlights: [],
+                                                          isMainLine: true,
+                                                          children: [
+                                                            {
+                                                              id: 'london-cs-8w-Bd3',
+                                                              san: 'Bd3',
+                                                              uci: 'f1d3',
+                                                              fen: 'r1bq1rk1/pp3ppp/2nbpn2/2pp4/3P4/2PBPNB1/PP1N1PPP/R2QK2R b KQ - 6 8',
+                                                              moveNumber: 15,
+                                                              color: 'w',
+                                                              explanation:
+                                                                'White develops the bishop to d3, eyeing the kingside and preparing to castle. The London setup is nearly complete — next comes Qe2 and O-O, followed by the e4 break.',
+                                                              strategicIdea:
+                                                                'Even in the center-strike variation, the London plan remains the same: develop all pieces, build the pyramid, then play for e4. The system\'s consistency is its greatest strength.',
+                                                              concepts: ['development', 'piece_activity'],
+                                                              arrows: [
+                                                                { from: 'd3', to: 'h7', color: 'rgba(247, 198, 49, 0.4)' },
+                                                              ],
+                                                              highlights: [],
+                                                              isMainLine: true,
+                                                              children: [],
+                                                            },
+                                                          ],
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
                                     },
                                   ],
                                 },
@@ -274,7 +568,93 @@ export const londonSystem: OpeningDefinition = {
                                 { square: 'e3', color: '#96bc4b30' },
                               ],
                               isMainLine: true,
-                              children: [],
+                              children: [
+                                {
+                                  id: 'london-ec-4b-Nc6',
+                                  san: 'Nc6',
+                                  uci: 'b8c6',
+                                  fen: 'r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR w KQkq - 1 5',
+                                  moveNumber: 8,
+                                  color: 'b',
+                                  explanation:
+                                    'Black develops the knight, continuing to pressure d4. White should continue with the standard London development.',
+                                  concepts: ['development', 'center_control'],
+                                  arrows: [
+                                    { from: 'c6', to: 'd4', color: 'rgba(202, 52, 49, 0.4)' },
+                                  ],
+                                  highlights: [],
+                                  isMainLine: true,
+                                  children: [
+                                    {
+                                      id: 'london-ec-5w-Nf3',
+                                      san: 'Nf3',
+                                      uci: 'g1f3',
+                                      fen: 'r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 2 5',
+                                      moveNumber: 9,
+                                      color: 'w',
+                                      explanation:
+                                        'White develops naturally with Nf3. The London plan stays the same: Nf3, Nbd2, Bd3, O-O, and aim for e4.',
+                                      concepts: ['development'],
+                                      arrows: [],
+                                      highlights: [],
+                                      isMainLine: true,
+                                      children: [
+                                        {
+                                          id: 'london-ec-5b-e6',
+                                          san: 'e6',
+                                          uci: 'e7e6',
+                                          fen: 'r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R w KQkq - 0 6',
+                                          moveNumber: 10,
+                                          color: 'b',
+                                          explanation:
+                                            'Black plays e6, reinforcing d5 and preparing to develop the dark-squared bishop. The position has transposed to a common London structure.',
+                                          concepts: ['pawn_structure', 'development'],
+                                          arrows: [],
+                                          highlights: [],
+                                          isMainLine: true,
+                                          children: [
+                                            {
+                                              id: 'london-ec-6w-Nbd2',
+                                              san: 'Nbd2',
+                                              uci: 'b1d2',
+                                              fen: 'r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 1 6',
+                                              moveNumber: 11,
+                                              color: 'w',
+                                              explanation:
+                                                'White completes the minor piece development. The knight on d2 supports e4 and keeps the London structure intact.',
+                                              concepts: ['development'],
+                                              arrows: [
+                                                { from: 'd2', to: 'e4', color: 'rgba(247, 198, 49, 0.4)' },
+                                              ],
+                                              highlights: [],
+                                              isMainLine: true,
+                                              children: [
+                                                {
+                                                  id: 'london-ec-6b-Bd6',
+                                                  san: 'Bd6',
+                                                  uci: 'f8d6',
+                                                  fen: 'r1bqk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R w KQkq - 2 7',
+                                                  moveNumber: 12,
+                                                  color: 'b',
+                                                  explanation:
+                                                    'Black challenges the London bishop, reaching the standard structure. The game often continues with Bg3, Bxg3, hxg3 and White gets the open h-file.',
+                                                  concepts: ['development', 'piece_activity'],
+                                                  arrows: [
+                                                    { from: 'd6', to: 'f4', color: 'rgba(202, 52, 49, 0.5)' },
+                                                  ],
+                                                  highlights: [],
+                                                  isMainLine: true,
+                                                  children: [],
+                                                },
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                              ],
                             },
                           ],
                         },
@@ -335,7 +715,59 @@ export const londonSystem: OpeningDefinition = {
                           ],
                           highlights: [],
                           isMainLine: true,
-                          children: [],
+                          children: [
+                            {
+                              id: 'london-imm-4w-Nf3',
+                              san: 'Nf3',
+                              uci: 'g1f3',
+                              fen: 'r1bqkbnr/pp1ppppp/2n5/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 2 4',
+                              moveNumber: 7,
+                              color: 'w',
+                              explanation:
+                                'White continues development calmly. The knight defends d4 and prepares castling. The London player handles aggressive responses with composure.',
+                              concepts: ['development', 'center_control'],
+                              arrows: [],
+                              highlights: [],
+                              isMainLine: true,
+                              children: [
+                                {
+                                  id: 'london-imm-4b-e6',
+                                  san: 'e6',
+                                  uci: 'e7e6',
+                                  fen: 'r1bqkbnr/pp2pppp/2n1p3/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 0 5',
+                                  moveNumber: 8,
+                                  color: 'b',
+                                  explanation:
+                                    'Black plays e6, supporting d5 and preparing to develop the bishop. The game transposes to well-known London structures.',
+                                  concepts: ['development', 'pawn_structure'],
+                                  arrows: [],
+                                  highlights: [],
+                                  isMainLine: true,
+                                  children: [
+                                    {
+                                      id: 'london-imm-5w-c3',
+                                      san: 'c3',
+                                      uci: 'c2c3',
+                                      fen: 'r1bqkbnr/pp2pppp/2n1p3/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 0 5',
+                                      moveNumber: 9,
+                                      color: 'w',
+                                      explanation:
+                                        'White completes the London pyramid. Regardless of Black\'s aggressive early c5, the standard structure works perfectly. This is the power of a system opening!',
+                                      concepts: ['center_control', 'pawn_structure'],
+                                      arrows: [],
+                                      highlights: [
+                                        { square: 'c3', color: '#96bc4b30' },
+                                        { square: 'd4', color: '#96bc4b30' },
+                                        { square: 'e3', color: '#96bc4b30' },
+                                      ],
+                                      isMainLine: true,
+                                      children: [],
+                                    },
+                                  ],
+                                },
+                              ],
+                            },
+                          ],
                         },
                       ],
                     },
@@ -379,7 +811,141 @@ export const londonSystem: OpeningDefinition = {
               ],
               highlights: [{ square: 'f4', color: '#96bc4b40' }],
               isMainLine: true,
-              children: [],
+              children: [
+                {
+                  id: 'london-ind-2b-d5',
+                  san: 'd5',
+                  uci: 'd7d5',
+                  fen: 'rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR w KQkq - 0 3',
+                  moveNumber: 4,
+                  color: 'b',
+                  explanation:
+                    'Black plays d5, and the game now transposes into the same main London structure. This is the beauty of the London — regardless of Black\'s move order, the position converges to familiar territory.',
+                  concepts: ['center_control'],
+                  arrows: [],
+                  highlights: [],
+                  isMainLine: true,
+                  children: [
+                    {
+                      id: 'london-ind-3w-e3',
+                      san: 'e3',
+                      uci: 'e2e3',
+                      fen: 'rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3',
+                      moveNumber: 5,
+                      color: 'w',
+                      explanation:
+                        'White plays e3, supporting d4 and freeing the light-squared bishop. The position has fully transposed to the main London line.',
+                      concepts: ['center_control', 'development'],
+                      arrows: [],
+                      highlights: [],
+                      isMainLine: true,
+                      children: [
+                        {
+                          id: 'london-ind-3b-e6',
+                          san: 'e6',
+                          uci: 'e7e6',
+                          fen: 'rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4',
+                          moveNumber: 6,
+                          color: 'b',
+                          explanation:
+                            'Black plays e6, and the position is identical to the main line after 1.d4 d5 2.Bf4 Nf6 3.e3 e6. This shows how different move orders lead to the same London positions.',
+                          concepts: ['pawn_structure'],
+                          arrows: [],
+                          highlights: [],
+                          isMainLine: true,
+                          children: [
+                            {
+                              id: 'london-ind-4w-Nf3',
+                              san: 'Nf3',
+                              uci: 'g1f3',
+                              fen: 'rnbqkb1r/ppp2ppp/4pn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 1 4',
+                              moveNumber: 7,
+                              color: 'w',
+                              explanation:
+                                'White develops the knight. The position is now identical to the main London line, confirming the transposition. White continues with Bd3, O-O, Nbd2, c3 as usual.',
+                              concepts: ['development'],
+                              arrows: [],
+                              highlights: [],
+                              isMainLine: true,
+                              children: [
+                                {
+                                  id: 'london-ind-4b-Bd6',
+                                  san: 'Bd6',
+                                  uci: 'f8d6',
+                                  fen: 'rnbqk2r/ppp2ppp/3bpn2/3p4/3P1B2/4PN2/PPP2PPP/RN1QKB1R w KQkq - 2 5',
+                                  moveNumber: 8,
+                                  color: 'b',
+                                  explanation:
+                                    'Black challenges the London bishop as in the main line. The game continues with Bg3, Bxg3, hxg3, and White gets the open h-file for attacking chances.',
+                                  concepts: ['development', 'piece_activity'],
+                                  arrows: [
+                                    { from: 'd6', to: 'f4', color: 'rgba(202, 52, 49, 0.5)' },
+                                  ],
+                                  highlights: [],
+                                  isMainLine: true,
+                                  children: [
+                                    {
+                                      id: 'london-ind-5w-Bg3',
+                                      san: 'Bg3',
+                                      uci: 'f4g3',
+                                      fen: 'rnbqk2r/ppp2ppp/3bpn2/3p4/3P4/4PNB1/PPP2PPP/RN1QKB1R b KQkq - 3 5',
+                                      moveNumber: 9,
+                                      color: 'w',
+                                      explanation:
+                                        'White retreats, maintaining the bishop. If Black trades, White gets the open h-file. The position has fully merged with the main line.',
+                                      concepts: ['piece_activity'],
+                                      arrows: [],
+                                      highlights: [],
+                                      isMainLine: true,
+                                      children: [
+                                        {
+                                          id: 'london-ind-5b-OO',
+                                          san: 'O-O',
+                                          uci: 'e8g8',
+                                          fen: 'rnbq1rk1/ppp2ppp/3bpn2/3p4/3P4/4PNB1/PPP2PPP/RN1QKB1R w KQ - 4 6',
+                                          moveNumber: 10,
+                                          color: 'b',
+                                          explanation:
+                                            'Black castles. White continues with Bd3 and the standard London plan. The Indian move order has fully transposed into the main London line.',
+                                          concepts: ['king_safety'],
+                                          arrows: [],
+                                          highlights: [],
+                                          isMainLine: true,
+                                          children: [
+                                            {
+                                              id: 'london-ind-6w-Bd3',
+                                              san: 'Bd3',
+                                              uci: 'f1d3',
+                                              fen: 'rnbq1rk1/ppp2ppp/3bpn2/3p4/3P4/3BPNB1/PPP2PPP/RN1QK2R b KQ - 5 6',
+                                              moveNumber: 11,
+                                              color: 'w',
+                                              explanation:
+                                                'White develops the bishop to d3, completing the standard London setup. The bishop eyes h7 and supports the future e4 break. The London system works identically regardless of Black\'s move order — this is its greatest strength for beginners.',
+                                              strategicIdea:
+                                                'The Indian move order (1...Nf6 instead of 1...d5) makes no practical difference against the London. White always reaches the same comfortable setup. This is why the London is called a "system" — one plan fits all!',
+                                              concepts: ['development', 'piece_activity'],
+                                              arrows: [
+                                                { from: 'd3', to: 'h7', color: 'rgba(247, 198, 49, 0.4)' },
+                                              ],
+                                              highlights: [],
+                                              isMainLine: true,
+                                              children: [],
+                                            },
+                                          ],
+                                        },
+                                      ],
+                                    },
+                                  ],
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

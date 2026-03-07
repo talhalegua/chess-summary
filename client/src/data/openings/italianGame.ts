@@ -234,7 +234,229 @@ export const italianGame: OpeningDefinition = {
                                                 { square: 'c5', color: '#96bc4b30' },
                                               ],
                                               isMainLine: true,
-                                              children: [],
+                                              children: [
+                                                {
+                                                  id: 'italian-6b-Bb4',
+                                                  san: 'Bb4+',
+                                                  uci: 'c5b4',
+                                                  fen: 'r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP3PPP/RNBQK2R w KQkq - 1 7',
+                                                  moveNumber: 7,
+                                                  color: 'b',
+                                                  explanation:
+                                                    'Black gives check with the bishop, forcing White to deal with the pin. This is the main line of the Giuoco Piano — by checking on b4, Black disrupts White\'s ideal development and forces a decision about how to block.',
+                                                  concepts: ['tactical_threat', 'tempo'],
+                                                  arrows: [
+                                                    { from: 'b4', to: 'e1', color: 'rgba(202, 52, 49, 0.5)' },
+                                                  ],
+                                                  highlights: [],
+                                                  isMainLine: true,
+                                                  children: [
+                                                    {
+                                                      id: 'italian-7w-Bd2',
+                                                      san: 'Bd2',
+                                                      uci: 'c1d2',
+                                                      fen: 'r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP1B1PPP/RN1QK2R b KQkq - 2 7',
+                                                      moveNumber: 7,
+                                                      color: 'w',
+                                                      explanation:
+                                                        'White blocks the check with the bishop. This is the most natural interposition — the bishop develops to d2 where it serves a useful defensive role while keeping all pieces coordinated.',
+                                                      strategicIdea:
+                                                        'When forced to block a check, choose the piece that benefits most from the new square. The bishop on d2 can later reposition to more active squares.',
+                                                      concepts: ['development', 'king_safety'],
+                                                      arrows: [],
+                                                      highlights: [],
+                                                      isMainLine: true,
+                                                      children: [
+                                                        {
+                                                          id: 'italian-7b-Bxd2',
+                                                          san: 'Bxd2+',
+                                                          uci: 'b4d2',
+                                                          fen: 'r1bqk2r/pppp1ppp/2n2n2/8/2BPP3/5N2/PP1b1PPP/RN1QK2R w KQkq - 0 8',
+                                                          moveNumber: 8,
+                                                          color: 'b',
+                                                          explanation:
+                                                            'Black captures the bishop, exchanging pieces and giving another check. Trading bishops here simplifies the position slightly while maintaining the tension in the center.',
+                                                          concepts: ['tactical_threat'],
+                                                          arrows: [],
+                                                          highlights: [],
+                                                          isMainLine: true,
+                                                          children: [
+                                                            {
+                                                              id: 'italian-8w-Nbxd2',
+                                                              san: 'Nbxd2',
+                                                              uci: 'b1d2',
+                                                              fen: 'r1bqk2r/pppp1ppp/2n2n2/8/2BPP3/5N2/PP1N1PPP/R2QK2R b KQkq - 0 8',
+                                                              moveNumber: 8,
+                                                              color: 'w',
+                                                              explanation:
+                                                                'White recaptures with the knight, developing it toward the center. The knight on d2 supports the e4 pawn and can later jump to useful squares like b3 or f1.',
+                                                              strategicIdea:
+                                                                'When recapturing, consider which piece benefits most from the new square. The knight on d2 centralizes while keeping the queen free to act.',
+                                                              concepts: ['development', 'center_control'],
+                                                              arrows: [],
+                                                              highlights: [],
+                                                              isMainLine: true,
+                                                              children: [
+                                                                {
+                                                                  id: 'italian-8b-d5',
+                                                                  san: 'd5',
+                                                                  uci: 'd7d5',
+                                                                  fen: 'r1bqk2r/ppp2ppp/2n2n2/3p4/2BPP3/5N2/PP1N1PPP/R2QK2R w KQkq - 0 9',
+                                                                  moveNumber: 9,
+                                                                  color: 'b',
+                                                                  explanation:
+                                                                    'Black strikes in the center with d5, challenging White\'s pawn duo. This is the thematic counter-break — by attacking e4 and d4 simultaneously, Black fights for equality and opens lines for their pieces.',
+                                                                  concepts: ['center_control', 'tactical_threat'],
+                                                                  arrows: [
+                                                                    { from: 'd5', to: 'e4', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                    { from: 'd5', to: 'c4', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                  ],
+                                                                  highlights: [],
+                                                                  isMainLine: true,
+                                                                  children: [
+                                                                    {
+                                                                      id: 'italian-9w-exd5',
+                                                                      san: 'exd5',
+                                                                      uci: 'e4d5',
+                                                                      fen: 'r1bqk2r/ppp2ppp/2n2n2/3P4/2BP4/5N2/PP1N1PPP/R2QK2R b KQkq - 0 9',
+                                                                      moveNumber: 9,
+                                                                      color: 'w',
+                                                                      explanation:
+                                                                        'White captures on d5, maintaining the pawn in the center. The d5 pawn is temporarily advanced and can become a target, but it also cramps Black\'s position and controls key squares.',
+                                                                      concepts: ['center_control', 'pawn_structure'],
+                                                                      arrows: [],
+                                                                      highlights: [
+                                                                        { square: 'd5', color: '#96bc4b40' },
+                                                                      ],
+                                                                      isMainLine: true,
+                                                                      children: [
+                                                                        {
+                                                                          id: 'italian-9b-Nxd5',
+                                                                          san: 'Nxd5',
+                                                                          uci: 'f6d5',
+                                                                          fen: 'r1bqk2r/ppp2ppp/2n5/3n4/2BP4/5N2/PP1N1PPP/R2QK2R w KQkq - 0 10',
+                                                                          moveNumber: 10,
+                                                                          color: 'b',
+                                                                          explanation:
+                                                                            'Black recaptures with the knight, placing it on a strong central outpost. The knight on d5 is well-centralized and exerts pressure in all directions. The position is roughly balanced with play for both sides.',
+                                                                          concepts: ['center_control', 'piece_activity'],
+                                                                          arrows: [],
+                                                                          highlights: [
+                                                                            { square: 'd5', color: '#96bc4b40' },
+                                                                          ],
+                                                                          isMainLine: true,
+                                                                          children: [
+                                                                            {
+                                                                              id: 'italian-10w-Qb3',
+                                                                              san: 'Qb3',
+                                                                              uci: 'd1b3',
+                                                                              fen: 'r1bqk2r/ppp2ppp/2n5/3n4/2BP4/1Q3N2/PP1N1PPP/R3K2R b KQkq - 1 10',
+                                                                              moveNumber: 10,
+                                                                              color: 'w',
+                                                                              explanation:
+                                                                                'White develops the queen to b3, targeting the d5 knight and the b7 pawn. This creates dual threats and forces Black to respond accurately to avoid material loss.',
+                                                                              strategicIdea:
+                                                                                'Activating the queen to attack multiple targets simultaneously puts pressure on the opponent. The b3 square is ideal — the queen supports the d-pawn advance and eyes the b7 weakness.',
+                                                                              watchOutFor:
+                                                                                'Black needs to be careful about the b7 pawn. The knight on d5 is pinned against the b7 pawn indirectly through the queen\'s diagonal.',
+                                                                              concepts: ['tactical_threat', 'piece_activity'],
+                                                                              arrows: [
+                                                                                { from: 'b3', to: 'd5', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                { from: 'b3', to: 'b7', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                              ],
+                                                                              highlights: [],
+                                                                              isMainLine: true,
+                                                                              children: [
+                                                                                {
+                                                                                  id: 'italian-10b-Na5',
+                                                                                  san: 'Na5',
+                                                                                  uci: 'c6a5',
+                                                                                  fen: 'r1bqk2r/ppp2ppp/8/n2n4/2BP4/1Q3N2/PP1N1PPP/R3K2R w KQkq - 2 11',
+                                                                                  moveNumber: 11,
+                                                                                  color: 'b',
+                                                                                  explanation:
+                                                                                    'Black attacks the queen with the knight, forcing it to move. The knight on a5 also eyes the c4 bishop, and this maneuver creates tactical complications that Black can use to equalize.',
+                                                                                  concepts: ['tactical_threat', 'tempo'],
+                                                                                  arrows: [
+                                                                                    { from: 'a5', to: 'b3', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                    { from: 'a5', to: 'c4', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                  ],
+                                                                                  highlights: [],
+                                                                                  isMainLine: true,
+                                                                                  children: [
+                                                                                    {
+                                                                                      id: 'italian-11w-Qa4',
+                                                                                      san: 'Qa4+',
+                                                                                      uci: 'b3a4',
+                                                                                      fen: 'r1bqk2r/ppp2ppp/8/n2n4/Q1BP4/5N2/PP1N1PPP/R3K2R b KQkq - 3 11',
+                                                                                      moveNumber: 11,
+                                                                                      color: 'w',
+                                                                                      explanation:
+                                                                                        'White retreats the queen to a4 with check, gaining a tempo. The check forces Black to respond, and the queen remains active on the a4 square where it continues to exert pressure along the a4-e8 diagonal.',
+                                                                                      concepts: ['tactical_threat', 'tempo'],
+                                                                                      arrows: [
+                                                                                        { from: 'a4', to: 'e8', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                      ],
+                                                                                      highlights: [],
+                                                                                      isMainLine: true,
+                                                                                      children: [
+                                                                                        {
+                                                                                          id: 'italian-11b-Nc6',
+                                                                                          san: 'Nc6',
+                                                                                          uci: 'a5c6',
+                                                                                          fen: 'r1bqk2r/ppp2ppp/2n5/3n4/Q1BP4/5N2/PP1N1PPP/R3K2R w KQkq - 4 12',
+                                                                                          moveNumber: 12,
+                                                                                          color: 'b',
+                                                                                          explanation:
+                                                                                            'Black blocks the check by returning the knight to c6. The knight is well-placed here, defending the center and supporting the d5 knight. Black has weathered the initial pressure.',
+                                                                                          concepts: ['development', 'center_control'],
+                                                                                          arrows: [],
+                                                                                          highlights: [],
+                                                                                          isMainLine: true,
+                                                                                          children: [
+                                                                                            {
+                                                                                              id: 'italian-12w-Qb3',
+                                                                                              san: 'Qb3',
+                                                                                              uci: 'a4b3',
+                                                                                              fen: 'r1bqk2r/ppp2ppp/2n5/3n4/2BP4/1Q3N2/PP1N1PPP/R3K2R b KQkq - 5 12',
+                                                                                              moveNumber: 12,
+                                                                                              color: 'w',
+                                                                                              explanation:
+                                                                                                'White returns the queen to b3, maintaining pressure on the d5 knight and b7 pawn. This repetition allows White to recentralize the queen while keeping the threats alive. The position is dynamically balanced with chances for both sides in the middlegame.',
+                                                                                              strategicIdea:
+                                                                                                'Repeating the queen maneuver is not a waste of time — White has gained information about Black\'s setup and can now plan the next phase with the queen ideally placed on b3.',
+                                                                                              concepts: ['piece_activity', 'center_control'],
+                                                                                              arrows: [
+                                                                                                { from: 'b3', to: 'd5', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                                { from: 'b3', to: 'b7', color: 'rgba(202, 52, 49, 0.4)' },
+                                                                                              ],
+                                                                                              highlights: [],
+                                                                                              isMainLine: true,
+                                                                                              children: [],
+                                                                                            },
+                                                                                          ],
+                                                                                        },
+                                                                                      ],
+                                                                                    },
+                                                                                  ],
+                                                                                },
+                                                                              ],
+                                                                            },
+                                                                          ],
+                                                                        },
+                                                                      ],
+                                                                    },
+                                                                  ],
+                                                                },
+                                                              ],
+                                                            },
+                                                          ],
+                                                        },
+                                                      ],
+                                                    },
+                                                  ],
+                                                },
+                                              ],
                                             },
                                           ],
                                         },

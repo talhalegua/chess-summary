@@ -36,6 +36,7 @@ export interface UseOpeningNavigationReturn {
   goToMainLine: () => void;
   selectBranch: (nodeId: string) => void;
   goToMove: (index: number) => void;
+  goToNode: (nodeId: string) => void;
 }
 
 /** Count the depth of the main line from a set of root children */
@@ -55,6 +56,19 @@ function getMainLinePath(nodes: OpeningMoveNode[]): OpeningMoveNode[] {
 /** Check if a path follows the main line throughout */
 function isPathOnMainLine(path: OpeningMoveNode[]): boolean {
   return path.every(node => node.isMainLine);
+}
+
+/** Find the path from root to a node with the given ID */
+function findPathToNode(
+  roots: OpeningMoveNode[],
+  targetId: string,
+): OpeningMoveNode[] | null {
+  for (const node of roots) {
+    if (node.id === targetId) return [node];
+    const subPath = findPathToNode(node.children, targetId);
+    if (subPath) return [node, ...subPath];
+  }
+  return null;
 }
 
 export function useOpeningNavigation(opening: OpeningDefinition): UseOpeningNavigationReturn {
@@ -161,6 +175,16 @@ export function useOpeningNavigation(opening: OpeningDefinition): UseOpeningNavi
     setCurrentIndex(Math.max(-1, Math.min(index, path.length - 1)));
   }, [path.length]);
 
+  // Navigate directly to any node in the tree by ID
+  const goToNode = useCallback((nodeId: string) => {
+    const newPath = findPathToNode(opening.moves, nodeId);
+    if (newPath) {
+      setPath(newPath);
+      setCurrentIndex(newPath.length - 1);
+      newPath.forEach(n => markExplored(n.id));
+    }
+  }, [opening.moves, markExplored]);
+
   // Keyboard navigation
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
@@ -198,5 +222,6 @@ export function useOpeningNavigation(opening: OpeningDefinition): UseOpeningNavi
     goToMainLine,
     selectBranch,
     goToMove,
+    goToNode,
   };
 }
