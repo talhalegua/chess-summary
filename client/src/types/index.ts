@@ -119,7 +119,7 @@ export interface StockfishResult {
   depth: number;
 }
 
-export type AppView = 'landing' | 'select-game' | 'analysis' | 'opening-select' | 'opening-trainer';
+export type AppView = 'landing' | 'review-input' | 'select-game' | 'analysis' | 'opening-select' | 'opening-trainer';
 
 // Re-export opening trainer types
 export type {

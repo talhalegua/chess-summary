@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { Header } from './components/Header';
 import { LandingPage } from './components/LandingPage';
+import { ReviewInputView } from './components/ReviewInputView';
 import { GameSelector } from './components/GameSelector';
 import { AnalysisView } from './components/AnalysisView';
 import { AnalysisProgress } from './components/AnalysisProgress';
@@ -76,6 +77,10 @@ function App() {
     [startAnalysis],
   );
 
+  const handleReviewGame = useCallback(() => {
+    setView('review-input');
+  }, []);
+
   const handleOpenOpenings = useCallback(() => {
     setView('opening-select');
   }, []);
@@ -128,9 +133,16 @@ function App() {
 
       {!showProgress && view === 'landing' && (
         <LandingPage
+          onReviewGame={handleReviewGame}
+          onOpenOpenings={handleOpenOpenings}
+        />
+      )}
+
+      {!showProgress && view === 'review-input' && (
+        <ReviewInputView
           onFetchGames={handleFetchGames}
           onPastePgn={handlePastePgn}
-          onOpenOpenings={handleOpenOpenings}
+          onBack={handleGoHome}
           isLoading={fetchLoading}
           error={fetchError || analysisError}
         />
